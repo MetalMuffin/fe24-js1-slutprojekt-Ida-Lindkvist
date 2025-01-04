@@ -2,14 +2,12 @@ import { fetchTopRated, fetchPopular, searchMulti, fetchMoviesByYear } from './a
 import { renderMovies, renderError, renderSearchResults, renderMoviesByYear } from './ui.js';
 import anime from '../anime/anime.es.js';
 
-
 document.addEventListener('DOMContentLoaded', () => {
     const topRatedBtn = document.getElementById('top-rated-btn');
     const popularBtn = document.querySelector('#popular-btn');
     const searchForm = document.querySelector('#search-form');
     const yearInput = document.getElementById('year-input');
-    const searchYearBtn = document.getElementById('fetch-year-movies');
-
+    const searchYearBtn = document.getElementById('fetch-year-movies');    
 
     topRatedBtn.addEventListener('click', async () => {
         try {
@@ -49,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     searchYearBtn.addEventListener('click', async () => {
         console.log('knappen funkar');
-        const year = parseInt(yearInput.value, 10);
+        const year = parseInt(yearInput.value);
         if (year >= 1900 && year <= 2024) {
             try {
                 const movies = await fetchMoviesByYear(year);
@@ -63,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Ange ett giltigt år mellan 1900 och 2024.');
         }
     });
-    console.log(topRatedBtn, popularBtn, searchForm, yearInput, searchYearBtn);
 
     
 });
