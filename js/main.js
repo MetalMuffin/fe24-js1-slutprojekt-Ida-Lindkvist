@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const movies = await fetchTopRated();
             renderMovies(movies);
             animateMovies();
-        } catch (error) {
+        } 
+        catch (error) {
             renderError('Could not load top-rated movies.');
         }
     });
@@ -26,7 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const movies = await fetchPopular();
             renderMovies(movies);
             animateMovies();
-        } catch (error) {
+        } 
+        catch (error) {
             renderError('Could not load popular movies.');
         }
     });
@@ -39,27 +41,33 @@ document.addEventListener('DOMContentLoaded', () => {
             const results = await searchMulti(query);
             renderSearchResults(results);
             animateMovies();
-        } catch (error) {
+        } 
+        catch (error) {
             renderError('An error occurred while searching. Please try again later');
         }
     });
 
     searchYearBtn.addEventListener('click', async () => {
+        console.log('knappen funkar');
         const year = parseInt(yearInput.value, 10);
         if (year >= 1900 && year <= 2024) {
             try {
                 const movies = await fetchMoviesByYear(year);
                 renderMoviesByYear(movies);
                 animateMovies();
-            } catch (error) {
+            } 
+            catch (error) {
                 renderError('Could not load movies for the selected year.');
             }
         } else {
             alert('Ange ett giltigt år mellan 1900 och 2024.');
         }
     });
+    console.log(topRatedBtn, popularBtn, searchForm, yearInput, searchYearBtn);
+
     
 });
+
 
 function animateMovies() {
     anime({

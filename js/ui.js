@@ -1,14 +1,15 @@
 export function renderMovies(movies) {
     const container = document.querySelector('#movie-container');
     container.innerHTML = '';
+    
     movies.forEach(movie => {
-        const movieCard = `
-            <div class="movie-card">
+        const movieCard = 
+            `<div class="movie-card">
                 <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="${movie.title}">
                 <h3>${movie.title}</h3>
                 <p>Release date: ${movie.release_date}</p>
-            </div>
-        `;
+            </div>`;
+
         container.innerHTML += movieCard;
     });
 }
@@ -29,14 +30,14 @@ export function renderSearchResults(results) {
 
     results.forEach(item => {
         if (item.media_type === 'movie') {
-            container.innerHTML += `
-                <div class="movie-card">
-                    <img src="https://image.tmdb.org/t/p/w500/${item.poster_path}" alt="${item.title}">
-                    <h3>${item.title}</h3>
-                    <p>Release date: ${item.release_date || 'N/A'}</p>
-                    <p>${item.overview || 'No description available.'}</p>
-                </div>
-            `;
+            container.innerHTML += 
+            `<div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/${item.poster_path}" alt="${item.title}">
+                <h3>${item.title}</h3>
+                <p>Release date: ${item.release_date || 'N/A'}</p>
+                <p>${item.overview || 'No description available.'}</p>
+            </div>`;
+
         } else if (item.media_type === 'person') {
             const knownFor = item.known_for.map(work => {
                 return work.media_type === 'movie' ? `Movie: ${work.title}` : `TV: ${work.name}`;

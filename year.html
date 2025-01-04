@@ -9,7 +9,7 @@
 <body>
     <header>
         <nav class="navbar">
-            <h1>TMDB Movie App</h1>
+            <h1>MM Movie App</h1>
             <ul>
                 <li><button id="top-rated-btn">Top Rated</button></li>
                 <li><button id="popular-btn">Popular</button></li>
@@ -26,15 +26,15 @@
     <section class="search-section">
         <div id="search-section-div">
             
-            <div id="year-search">
+            <form id="year-search">
                 <input 
                 type="number" 
                 id="year-input" 
                 placeholder="Sök film efter år..." 
                 min="1900" 
                 max="2024">
-                <button id="fetch-year-movies">Sök</button>
-            </div>
+                <button type="submit" id="fetch-year-movies">Sök</button>
+            </form>
 
         </div>
         
@@ -51,7 +51,7 @@
 
    
     <footer>
-        <p>&copy; 2024 TMDB Movie App. Powered by TMDB API.</p>
+        <p>&copy; 2024 MM Movie App. Powered by TMDB API.</p>
     </footer>
 
     <script type="module" src="js/main.js"></script>
