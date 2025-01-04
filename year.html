@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1>TMDB Movie App</h1>
+            <ul>
+                <li><button id="top-rated-btn">Top Rated</button></li>
+                <li><button id="popular-btn">Popular</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="site-buttons">
+        <a href="search.html" class="site-buttons-button">Sök efter film eller person</a>
+        <a href="year.html" class="site-buttons-button">Sök film efter år</a>
+    
+    </div>
+
+    <section class="search-section">
+        <div id="search-section-div">
+            
+            <div id="year-search">
+                <input 
+                type="number" 
+                id="year-input" 
+                placeholder="Sök film efter år..." 
+                min="1900" 
+                max="2024">
+                <button id="fetch-year-movies">Sök</button>
+            </div>
+
+        </div>
+        
+        <div id="year-movie-list"></div>
+    
+    </section>
+
+    <main>
+        <section id="content-section">
+            <div id="movie-container" class="content-grid"></div>
+            <div id="error-container" class="error-message"></div>
+        </section>
+    </main>
+
+   
+    <footer>
+        <p>&copy; 2024 TMDB Movie App. Powered by TMDB API.</p>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #222;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+#top-rated-btn:hover {
+    background-color: #666;
+}
+
+#popular-btn:hover {
+    background-color: #666;
+}
+
+#site-buttons{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+
+}
+
+.site-buttons-button {
+    background-color: #444;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.site-buttons-button:hover {
+    background-color: #666;
+}
+
+#top-rated-btn, #popular-btn {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.search-section {
+    padding: 20px;
+    text-align: center;
+}
+
+#search-section-div {
+    padding: 10px;
+}
+
+#search-form {
+    padding-bottom: 15px;
+}
+
+#search-input, #year-input {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#movie-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.movie-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+}
+
+#year-movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .movie-item {
+    width: 200px;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .movie-item img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #222;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
