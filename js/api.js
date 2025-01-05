@@ -39,13 +39,9 @@ export async function searchMulti(query) {
 }
 
 export async function fetchMoviesByYear(year) {
-    console.log("fetchMoviesByYear", year || 0);
-    
     try {
         const response = await fetch(`${BASE_URL}/discover/movie?api_key=${API_KEY}&language=en-US&primary_release_year=${year}&page=1`);
         const data = await response.json();
-        console.log("fetchMoviesByYear, data:", data);
-        
         return data.results;
     } 
     catch (error) {

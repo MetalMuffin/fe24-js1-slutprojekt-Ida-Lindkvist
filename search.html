@@ -6,7 +6,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
+
     <header>
         <nav class="navbar">
             <h1>MM Movie App</h1>
@@ -16,30 +18,27 @@
             </ul>
         </nav>
     </header>
-
-    <div id="site-buttons">
-        <a href="search.html" class="site-buttons-button">Sök efter film eller person</a>
-        <a href="year.html" class="site-buttons-button">Sök film efter år</a>
     
-    </div>
-
-    <section class="search-section">
-        <div id="search-section-div">
-
-            <form id="search-form">
-                <input 
-                type="text" 
-                id="search-input" 
-                placeholder="Sök efter film eller person..." 
-                required
-                />
-                <button type="submit">Sök</button>
-            </form>
-
-        </div>
-    </section>
-
     <main>
+        <div id="site-buttons">
+            <a href="search.html" class="site-buttons-button">Sök efter film eller person</a>
+            <a href="year.html" class="site-buttons-button">Sök film efter år</a>
+        </div>
+
+        <section class="search-section">
+            <div id="search-section-div">
+                <form id="search-form">
+                    <input 
+                    type="text" 
+                    id="search-input" 
+                    placeholder="Sök efter film eller person..." 
+                    required
+                    />
+                    <button type="submit">Sök</button>
+                </form>
+            </div>
+        </section>
+
         <section id="content-section">
             <div id="movie-container" class="content-grid"></div>
             <div id="error-container" class="error-message"></div>

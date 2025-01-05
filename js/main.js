@@ -2,10 +2,10 @@ import { fetchTopRated, fetchPopular, searchMulti, fetchMoviesByYear } from './a
 import { renderMovies, renderError, renderSearchResults, renderMoviesByYear } from './ui.js';
 import anime from '../anime/anime.es.js';
 
-document.addEventListener('DOMContentLoaded', () => {
+
     const topRatedBtn = document.getElementById('top-rated-btn');
-    const popularBtn = document.querySelector('#popular-btn');
-    const searchForm = document.querySelector('#search-form');
+    const popularBtn = document.getElementById('popular-btn');
+    const searchForm = document.getElementById('search-form');
     const yearInput = document.getElementById('year-input');
     const searchYearBtn = document.getElementById('fetch-year-movies');    
 
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             animateMovies();
         } 
         catch (error) {
-            renderError('Could not load top-rated movies.');
+            renderError('Filmerna med högst betyg kunde tyvärr inte laddas, prova igen');
         }
     });
 
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
             animateMovies();
         } 
         catch (error) {
-            renderError('Could not load popular movies.');
+            renderError('De mest populära filmerna kunde tyvärr inte laddas, prova igen');
         }
     });
 
@@ -41,12 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
             animateMovies();
         } 
         catch (error) {
-            renderError('An error occurred while searching. Please try again later');
+            renderError('Hoppsan, något blev fel. Försök igen!');
         }
     });
 
     searchYearBtn.addEventListener('click', async () => {
-        console.log('knappen funkar');
         const year = parseInt(yearInput.value);
         if (year >= 1900 && year <= 2024) {
             try {
@@ -55,15 +54,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 animateMovies();
             } 
             catch (error) {
-                renderError('Could not load movies for the selected year.');
+                renderError('Filmerna som släpptes detta år kunde tyvärr inte laddas, försök igen');
             }
-        } else {
-            alert('Ange ett giltigt år mellan 1900 och 2024.');
+        } 
+        else {
+            alert('Hoppsan, ange ett giltigt år mellan 1900 och 2024');
         }
     });
 
-    
-});
 
 
 function animateMovies() {
