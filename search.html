@@ -20,32 +20,29 @@
     </header>
     
     <main>
-        <div id="site-buttons">
-            <a href="search.html" class="site-buttons-button">Sök efter film eller person</a>
-            <a href="year.html" class="site-buttons-button">Sök film efter år</a>
+        <div id="site-btn-container">
+            <a href="search.html" class="site-btn">Sök efter film eller person</a>
+            <a href="year.html" class="site-btn">Sök film efter år</a>
         </div>
 
         <section class="search-section">
-            <div id="search-section-div">
-                <form id="search-form">
-                    <input 
-                    type="text" 
-                    id="search-input" 
-                    placeholder="Sök efter film eller person..." 
-                    required
-                    />
-                    <button type="submit">Sök</button>
-                </form>
-            </div>
+            <form id="search-form">
+                <input 
+                type="text" 
+                id="search-input" 
+                placeholder="Sök efter film eller person..." 
+                required
+                />
+                <button type="submit">Sök</button>
+            </form>
         </section>
 
-        <section id="content-section">
-            <div id="movie-container" class="content-grid"></div>
-            <div id="error-container" class="error-message"></div>
+        <section>
+            <div id="movie-container"></div>
+            <div id="error-container"></div>
         </section>
     </main>
 
-   
     <footer>
         <p>&copy; 2024 MM Movie App. Powered by TMDB API.</p>
     </footer>

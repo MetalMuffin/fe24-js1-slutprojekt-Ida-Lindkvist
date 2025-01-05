@@ -1,3 +1,5 @@
+// Jag använde mig utav ChatGPT för den första sökfunktionen och arbetade utifrån den i resterande funktioner. Jag har även använt mig utav ChatGPT vid felsökning.
+
 export function renderMovies(movies) {
     const container = document.querySelector('#movie-container');
     container.innerHTML = '';
@@ -56,7 +58,7 @@ export function renderSearchResults(results) {
 }
 
 export function renderMoviesByYear(movies){
-    const movieList = document.getElementById('year-movie-list');
+    const movieList = document.getElementById('year-movie-container');
     movieList.innerHTML = '';
 
         if (movies.length === 0) {

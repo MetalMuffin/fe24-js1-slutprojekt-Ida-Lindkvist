@@ -1,3 +1,5 @@
+// Jag använde mig utav ChatGPT för den första sökfunktionen och arbetade utifrån den i resterande funktioner. Jag har även använt mig utav ChatGPT vid felsökning.
+
 import { fetchTopRated, fetchPopular, searchMulti, fetchMoviesByYear } from './api.js';
 import { renderMovies, renderError, renderSearchResults, renderMoviesByYear } from './ui.js';
 import anime from '../anime/anime.es.js';
@@ -7,7 +9,7 @@ import anime from '../anime/anime.es.js';
     const popularBtn = document.getElementById('popular-btn');
     const searchForm = document.getElementById('search-form');
     const yearInput = document.getElementById('year-input');
-    const searchYearBtn = document.getElementById('fetch-year-movies');    
+    const searchYearBtn = document.getElementById('year-search-btn');    
 
     topRatedBtn.addEventListener('click', async () => {
         try {

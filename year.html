@@ -19,28 +19,27 @@
     </header>
 
     <main>
-        <div id="site-buttons">
-            <a href="search.html" class="site-buttons-button">Sök efter film eller person</a>
-            <a href="year.html" class="site-buttons-button">Sök film efter år</a>
+        <div id="site-btn-container">
+            <a href="search.html" class="site-btn">Sök efter film eller person</a>
+            <a href="year.html" class="site-btn">Sök film efter år</a>
         </div>
 
         <section class="search-section">
-            <div id="search-section-div">
-                <form id="search-form">
-                    <input 
-                    type="number" 
-                    id="year-input" 
-                    placeholder="Sök film efter år..." 
-                    min="1900" 
-                    max="2024"/>
-                    <button type="submit" id="fetch-year-movies">Sök</button>
-                </form>
-            </div>
-        
-            <div id="year-movie-list"></div>
+            <form id="search-form">
+                <input 
+                type="number" 
+                id="year-input" 
+                placeholder="Sök film efter år..." 
+                min="1900" 
+                max="2024"
+                />
+                <button type="submit" id="year-search-btn">Sök</button>
+            </form>
+            
+            <div id="year-movie-container"></div>
         </section>
 
-        <section id="content-section">
+        <section>
             <div id="movie-container"></div>
             <div id="error-container"></div>
         </section>

@@ -27,14 +27,14 @@ body {
     background-color: #666;
 }
 
-#site-buttons{
+#site-btn-container{
     display: flex;
     justify-content: center;
     padding: 20px;
 
 }
 
-.site-buttons-button {
+.site-btn {
     background-color: #444;
     color: white;
     padding: 10px 15px;
@@ -44,15 +44,15 @@ body {
     text-decoration: none;
 }
 
-.site-buttons-button:hover {
+.site-btn:hover {
     background-color: #666;
 }
 
-#fetch-year-movies:hover {
+#year-search-btn:hover {
     background-color: #666;
 }
 
-#top-rated-btn, #popular-btn, #fetch-year-movies {
+#top-rated-btn, #popular-btn, #year-search-btn {
     background-color: #444;
     color: white;
     border: none;
@@ -66,10 +66,6 @@ body {
     text-align: center;
 }
 
-#search-section-div {
-    padding: 10px;
-}
-
 #search-form {
     padding-bottom: 15px;
 }
@@ -81,7 +77,7 @@ body {
     border-radius: 5px;
 }
 
-#movie-container, #year-movie-list {
+#movie-container, #year-movie-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
