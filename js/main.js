@@ -70,7 +70,7 @@ import anime from '../anime/anime.es.js';
     });
 
 
-
+// Animering för resultaten
 function animateMovies() {
     anime({
         targets: '#movie-container div, #movie-card, .movie-item',
