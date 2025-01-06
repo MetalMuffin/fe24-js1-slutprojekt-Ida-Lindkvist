@@ -12,6 +12,7 @@ import anime from '../anime/anime.es.js';
     const searchYearBtn = document.getElementById('year-search-btn');    
 
     topRatedBtn.addEventListener('click', async () => {
+        renderError('')
         try {
             const movies = await fetchTopRated();
             renderMovies(movies);
@@ -23,6 +24,7 @@ import anime from '../anime/anime.es.js';
     });
 
     popularBtn.addEventListener('click', async () => {
+        renderError('')
         try {
             const movies = await fetchPopular();
             renderMovies(movies);
@@ -36,6 +38,7 @@ import anime from '../anime/anime.es.js';
     searchForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const query = document.querySelector('#search-input').value.trim();
+        renderError('')
         
         try {
             const results = await searchMulti(query);
@@ -49,6 +52,8 @@ import anime from '../anime/anime.es.js';
 
     searchYearBtn.addEventListener('click', async () => {
         const year = parseInt(yearInput.value);
+        renderError('')
+
         if (year >= 1900 && year <= 2024) {
             try {
                 const movies = await fetchMoviesByYear(year);
@@ -60,7 +65,7 @@ import anime from '../anime/anime.es.js';
             }
         } 
         else {
-            alert('Hoppsan, ange ett giltigt år mellan 1900 och 2024');
+            renderError('Hoppsan, ange ett giltigt år mellan 1900 och 2024');
         }
     });
 
