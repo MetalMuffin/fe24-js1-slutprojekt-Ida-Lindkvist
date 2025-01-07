@@ -1,3 +1,5 @@
+// api.js skickar förfrågan och tar emot data från https://developer.themoviedb.org/reference/intro/getting-started
+
 const API_KEY = '1cf3deeabaa2b64293b78ab56413663e';
 const BASE_URL = 'https://api.themoviedb.org/3';
 

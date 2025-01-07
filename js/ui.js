@@ -1,4 +1,4 @@
-// Jag använde mig utav ChatGPT för den första sökfunktionen och arbetade utifrån den i resterande funktioner. Jag har även använt mig utav ChatGPT vid felsökning.
+// ui.js hanterar datan från api.js och placerar den i DOM.
 
 export function renderMovies(movies) {
     const container = document.querySelector('#movie-container');

@@ -9,8 +9,8 @@
 
 ## Teknologier
 - **HTML, CSS och JavaScript**: Grundläggande webbteknologier för gränssnitt och funktionalitet.
-- **The Movie Database (TMDb) API**: För att hämta filmdata.
-- **Anime.js**: För animeringar på sidan.
+- **The Movie Database (TMDb) API**: För att hämta filmdata. https://developer.themoviedb.org/reference/intro/getting-started
+- **Anime.js**: För animeringar på sidan. https://animejs.com/documentation/
 - **Modulärt projekt**: Separata moduler för API-anrop och UI-rendering.
 
 ## Mappstruktur
